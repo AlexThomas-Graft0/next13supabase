@@ -27,6 +27,8 @@ export default function Login() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
     });
+    console.log({ data, error });
+    router.push("/");
   }
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
