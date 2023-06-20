@@ -49,7 +49,7 @@ export default function Login() {
       ) : (
         <form
           className="flex-1 flex flex-col w-full max-w-sm justify-center gap-2"
-          onSubmit={view === "sign-in" ? signInWithGoogle : handleSignUp}
+          onSubmit={view === "sign-in" ? handleSignIn : signInWithGoogle}
         >
           <label className="text-md text-gray-400" htmlFor="email">
             Email
@@ -77,6 +77,9 @@ export default function Login() {
               <button className="bg-green-700 rounded px-4 py-2 text-gray-200 mb-6">
                 Sign In
               </button>
+              <button className="bg-green-700 rounded px-4 py-2 text-gray-200 mb-6">
+                Sign In With Google
+              </button>
               <p className="text-sm text-gray-500 text-center">
                 Don't have an account?
                 <button
@@ -92,6 +95,9 @@ export default function Login() {
             <>
               <button className="bg-green-700 rounded px-4 py-2 text-gray-200 mb-6">
                 Sign Up
+              </button>
+              <button className="bg-green-700 rounded px-4 py-2 text-gray-200 mb-6">
+                Sign In With Google
               </button>
               <p className="text-sm text-gray-500 text-center">
                 Already have an account?
