@@ -26,6 +26,9 @@ export default function Login() {
   async function signInWithGoogle() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
+      options: {
+        redirectTo: `${location.origin}/auth/callback`,
+      },
     });
     console.log({ data, error });
     router.push("/");
